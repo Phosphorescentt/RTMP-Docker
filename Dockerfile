@@ -8,4 +8,7 @@ ENV NGINX_RTMP_MODULE_VERSION 1.2.1
 RUN apt update && apt upgrade -y
 RUN apt install build-essential libpcre3 libpcre3-dev libssl-dev nginx libnginx-mod-rtmp ffmpeg -y
 
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY default-site /etc/nginx/sites-enabled/default
 
+RUN systemctl restart nginx.service

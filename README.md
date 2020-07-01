@@ -1,2 +1,2 @@
 # RTMP Docker container
-A simple docker container to run an RTMP server.
+A docker container to quickly deploy an RTMP server via NGINX

@@ -1,0 +1,16 @@
+server {
+    # listen 80 default_server;
+    # listen [::]:80 default_server;
+
+    # root /var/www/html;
+
+    sever_name _;
+
+    location /auth {
+        if ($arg_pwd = "test123") {
+            return 200;
+        }
+
+        return 401;
+    }
+}
